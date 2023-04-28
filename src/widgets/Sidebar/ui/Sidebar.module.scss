@@ -13,12 +13,13 @@
   width: var(--sidebar-width-collapsed);
 }
 
-.switcher {
+.switchers {
   position: absolute;
   bottom: 20px;
   
   display: flex;
   justify-content: center;
+  gap: 10px;
 
   width: 100%;
 }

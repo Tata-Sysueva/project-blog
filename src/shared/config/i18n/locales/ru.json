@@ -1,0 +1,20 @@
+{
+  "domains": {
+  },
+  "enums": {
+
+  },
+  "general_actions": {
+ 
+  },
+  "general_errors": {
+ 
+  },
+  "general_placeholders": {
+ 
+  },
+  "navigation": {
+    "main": "Главная",
+    "about": "О сайте"
+  }
+}
