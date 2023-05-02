@@ -1,7 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { MdLanguage } from 'react-icons/md';
 import upperFirst from 'lodash/upperFirst';
+import { useTranslation } from 'react-i18next';
+import { MdLanguage } from 'react-icons/md';
+
+import { Button, ThemeButton } from 'shared/ui/components/Button/Button';
 
 export const LanguageSwitcher = () => {
   const [, { language, changeLanguage }] = useTranslation();

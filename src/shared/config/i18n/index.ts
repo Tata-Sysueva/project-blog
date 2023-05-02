@@ -39,7 +39,7 @@ export const initI18n = async (initialLng?: AppLocale) => {
 
     ns: namespaces,
     defaultNS: 'translations',
-    debug: __IS_DEV__ ? true : false,
+    debug: !!__IS_DEV__,
 
     interpolation: {
       // not needed for react!

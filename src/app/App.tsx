@@ -1,11 +1,13 @@
 import './styles/index.scss';
-import { classNames } from "shared/lib/classNames/classNames";
-import { AppRouter } from './providers/router';
-import { Navbar } from 'widgets/Navbar';
-import { useTheme } from './providers/ThemeProviders';
-import { Sidebar } from 'widgets/Sidebar';
 import { useAsync } from 'react-use';
+
 import { initI18n } from 'shared/config/i18n';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+
+import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProviders';
 
 export const App = () => {
   const { theme } = useTheme();
@@ -27,5 +29,5 @@ export const App = () => {
         <AppRouter />
       </div>
     </div>
-  )
-}
+  );
+};
