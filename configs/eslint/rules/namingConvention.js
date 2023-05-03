@@ -61,15 +61,6 @@ module.exports = {
       format: ['PascalCase', 'camelCase']
     },
     {
-      selector: ['enum'],
-      format: ['PascalCase'],
-      custom: {
-        regex:
-          '((people|men|women|children)|(s|ss|sh|ch|x|z|o)es|[^aiu]s)(?<!series|lens|news)$',
-        match: false
-      }
-    },
-    {
       selector: ['property'],
       format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE']
     },

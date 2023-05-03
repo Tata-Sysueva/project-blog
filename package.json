@@ -15,7 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.21.5",
-    "@babel/eslint-parser": "^7.21.3",
     "@emotion/eslint-plugin": "^11.10.0",
     "@svgr/webpack": "^6.2.1",
     "@types/lodash": "^4.14.194",

@@ -12,9 +12,8 @@ declare module '*.jpeg';
 declare module '*.svg' {
   import type React from 'react';
 
-  const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
-
-  export default SVG;
+  export const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
 }
 
+// eslint-disable-next-line @typescript-eslint/naming-convention -- It's necessary for global types
 declare const __IS_DEV__: boolean;

@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   plugins: ['react'],
   extends: ['./configs/eslint/.eslintrc.base.js'],
   overrides: [
@@ -11,9 +11,10 @@ module.exports = {
     {
       files: ['**/shared/ui/components/**/*.[jt]sx?(x)'],
       rules: {
-        'no-restricted-imports': 'off'
+        'no-restricted-imports': 'off',
+        'react/button-has-type': 'off'
       }
-    },
+    }
   ],
   env: {
     browser: true,
@@ -33,7 +34,10 @@ module.exports = {
   },
   rules: {
     'react/jsx-uses-vars': 'warn',
-    'react/jsx-uses-react': 'warn'
+    'react/jsx-uses-react': 'warn',
+    '@typescript-eslint/strict-boolean-expressions': 'warn'
+  },
+  globals: {
+    __IS_DEV__: true
   }
 };
-
