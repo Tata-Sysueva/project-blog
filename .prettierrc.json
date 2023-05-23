@@ -3,5 +3,6 @@
   "jsonRecursiveSort": true,
   "singleAttributePerLine": true,
   "singleQuote": true,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "tabWidth": 2
 }

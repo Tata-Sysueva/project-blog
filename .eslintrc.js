@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['react'],
+  plugins: ['react', 'i18next'],
   extends: ['./configs/eslint/.eslintrc.base.js'],
   overrides: [
     {
@@ -35,7 +35,8 @@ module.exports = {
   rules: {
     'react/jsx-uses-vars': 'warn',
     'react/jsx-uses-react': 'warn',
-    '@typescript-eslint/strict-boolean-expressions': 'warn'
+    '@typescript-eslint/strict-boolean-expressions': 'warn',
+    'i18next/no-literal-string': 'warn'
   },
   globals: {
     __IS_DEV__: true

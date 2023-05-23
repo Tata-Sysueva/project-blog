@@ -18,6 +18,7 @@ export const App = () => {
   }
 
   if (i18nState.error) {
+    // eslint-disable-next-line i18next/no-literal-string -- This is not required for this line
     return <div>i18n loading error: {i18nState.error.message}</div>;
   }
 
