@@ -42,7 +42,7 @@ module.exports = {
     {
       selector: ['variable', 'typeProperty', 'parameter'],
       types: ['boolean'],
-      format: ['PascalCase'],
+      format: ['PascalCase', 'UPPER_CASE'],
       prefix: [
         'is',
         'was',
@@ -85,7 +85,7 @@ module.exports = {
     },
     {
       selector: ['typeLike', 'enumMember'],
-      format: ['PascalCase'],
+      format: ['PascalCase', 'UPPER_CASE'],
       custom: {
         regex: '^[A-Z0-9]{10,}$',
         match: false

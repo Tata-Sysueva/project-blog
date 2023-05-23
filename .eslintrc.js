@@ -36,7 +36,8 @@ module.exports = {
     'react/jsx-uses-vars': 'warn',
     'react/jsx-uses-react': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
-    'i18next/no-literal-string': 'warn'
+    'i18next/no-literal-string': 'warn',
+    'max-len': ['error', { ignoreComments: true }]
   },
   globals: {
     __IS_DEV__: true
