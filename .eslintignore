@@ -2,3 +2,4 @@
 build
 /public
 webpack.config.ts
+*.config.ts
