@@ -8,6 +8,7 @@ import { Sidebar } from 'widgets/Sidebar';
 
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProviders';
+import { Theme } from './providers/ThemeProviders/lib/ThemeContext';
 
 export const App = () => {
   const { theme } = useTheme();
@@ -22,8 +23,10 @@ export const App = () => {
     return <div>i18n loading error: {i18nState.error.message}</div>;
   }
 
+  const appTheme = theme || Theme.LIGHT;
+
   return (
-    <div className={classNames('app', {}, [theme])}>
+    <div className={classNames('app', {}, [appTheme])}>
       <Navbar />
       <div className="content-page">
         <Sidebar />

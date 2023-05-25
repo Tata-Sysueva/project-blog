@@ -15,7 +15,7 @@
     "unit": "jest --config ./configs/jest/jest.config.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tatiana Sysueva",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.21.5",
