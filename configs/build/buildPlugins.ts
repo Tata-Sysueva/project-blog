@@ -4,6 +4,7 @@ import webpack from'webpack';
 
 import { type BuildOptions } from './types/config';
 
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins( { paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
@@ -19,5 +20,8 @@ export function buildPlugins( { paths, isDev }: BuildOptions): webpack.WebpackPl
       __IS_DEV__: JSON.stringify(isDev),
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin(
+      { analyzerMode: process.env.STATS as 'server' || 'disabled' },
+    ),
   ]
 }
