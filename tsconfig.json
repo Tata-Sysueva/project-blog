@@ -27,7 +27,9 @@
       "src/*.ts",
       "src/*.tsx",
       "src/**/*.json",
-      "src/*.json"
+      "src/*.json",
+      "config/**/*.tsx",
+      "config/jest/setupTests.ts"
     ],
   "ts-node": {
     "compilerOptions": {

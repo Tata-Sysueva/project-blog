@@ -2,11 +2,11 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['react', 'i18next'],
-  extends: ['./configs/eslint/.eslintrc.base.js'],
+  extends: ['./config/eslint/.eslintrc.base.js'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
-      extends: ['./configs/eslint/.eslintrc.typescript.js']
+      extends: ['./config/eslint/.eslintrc.typescript.js']
     },
     {
       files: ['**/shared/ui/components/**/*.[jt]sx?(x)'],

@@ -20,8 +20,8 @@ module.exports = {
         '**/setupTests.{js,jsx,ts,tsx}',
         './scripts/**/*.{js,jsx,ts,tsx,mjs}',
         './scripts/*.{js,jsx,ts,tsx,mjs}',
-        './configs/**/*.{js,jsx,ts,tsx,mjs}',
-        './configs/*.{js,jsx,ts,tsx,mjs}'
+        './config/**/*.{js,jsx,ts,tsx,mjs}',
+        './config/*.{js,jsx,ts,tsx,mjs}'
       ]
     }
   ],
