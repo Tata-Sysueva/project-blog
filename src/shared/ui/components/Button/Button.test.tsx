@@ -1,18 +1,21 @@
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
+import { t } from 'i18next';
+
+import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 
 import { Button, ThemeButton } from './Button';
 
 describe('Button', () => {
   it('renders without crashing', () => {
-    const { getByText } = render(<Button>Click me</Button>);
+    renderWithTranslation(<Button>{t('general_actions:toggle')}</Button>);
 
-    expect(getByText('Click me')).toBeInTheDocument();
+    expect(screen.getByTestId('button')).toBeInTheDocument();
   });
 
   it('calls onClick prop when button is clicked', () => {
     const handleClick = jest.fn();
-    const { getByRole } = render(
-      <Button onClick={handleClick}>Click me</Button>
+    const { getByRole } = renderWithTranslation(
+      <Button onClick={handleClick}>{t('general_actions:toggle')}</Button>
     );
 
     fireEvent.click(getByRole('button'));
@@ -20,8 +23,8 @@ describe('Button', () => {
   });
 
   it('applies the correct theme class', () => {
-    const { container } = render(
-      <Button theme={ThemeButton.CLEAR}>Click me</Button>
+    const { container } = renderWithTranslation(
+      <Button theme={ThemeButton.CLEAR}>{t('general_actions:toggle')}</Button>
     );
 
     expect(container.firstChild).toHaveClass('clear');

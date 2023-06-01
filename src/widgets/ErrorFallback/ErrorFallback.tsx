@@ -8,7 +8,7 @@ export const ErrorFallback = ({
   <div>
     <h1>{error.message || 'Application error'}</h1>
     <span>
-      {componentStack ||
+      {componentStack != null ||
         'Oops, something went wrong. Please, contact developers'}
     </span>
   </div>

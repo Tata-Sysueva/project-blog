@@ -25,6 +25,7 @@ export const Button: FC<ButtonProps> = ({
     {...otherProps}
     className={classNames(cls.button, {}, [className, cls[theme]])}
     type={type || 'button'}
+    data-testid="button"
   >
     {children}
   </button>
