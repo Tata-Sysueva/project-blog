@@ -2,20 +2,17 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['react', 'i18next'],
-  extends: ['./config/eslint/.eslintrc.base.js'],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      extends: ['./config/eslint/.eslintrc.typescript.js']
-    },
-    {
-      files: ['**/shared/ui/components/**/*.[jt]sx?(x)'],
-      rules: {
-        'no-restricted-imports': 'off',
-        'react/button-has-type': 'off'
-      }
+  extends: ['./config/eslint/.eslintrc.base.js', 'plugin:storybook/recommended'],
+  overrides: [{
+    files: ['*.ts', '*.tsx'],
+    extends: ['./config/eslint/.eslintrc.typescript.js']
+  }, {
+    files: ['**/shared/ui/components/**/*.[jt]sx?(x)'],
+    rules: {
+      'no-restricted-imports': 'off',
+      'react/button-has-type': 'off'
     }
-  ],
+  }],
   env: {
     browser: true,
     commonjs: true,
@@ -37,7 +34,9 @@ module.exports = {
     'react/jsx-uses-react': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     'i18next/no-literal-string': 'warn',
-    'max-len': ['error', { ignoreComments: true }]
+    'max-len': ['error', {
+      ignoreComments: true
+    }]
   },
   globals: {
     __IS_DEV__: true

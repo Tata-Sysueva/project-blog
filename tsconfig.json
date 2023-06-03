@@ -28,9 +28,10 @@
       "src/*.tsx",
       "src/**/*.json",
       "src/*.json",
+      "config/**/*.ts",
       "config/**/*.tsx",
       "config/jest/setupTests.ts"
-    ],
+, "config/storybook/webpack.config.ts"    ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",

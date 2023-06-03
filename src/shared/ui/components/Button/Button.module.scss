@@ -1,12 +1,24 @@
 .button {
     cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
 }
 
 .clear {
     margin: 0;
     padding: 0;
 
-    background: none;
+    background: var(--bg-color);
     border: none;
     outline: none;
+}
+
+.outline {
+    padding: 10px 15px;
+    color: var(--primary-color);
+    background: none;
+    border: 1px solid var(--primary-color);
 }
