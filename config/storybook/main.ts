@@ -5,16 +5,7 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    {
-      name: '@storybook/addon-styling',
-      options: {
-        sass: {
-          // Require your preprocessor
-          implementation: 'sass'
-        }
-      }
-    }
+    '@storybook/addon-interactions'
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -22,7 +13,8 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag'
-  }
+  },
+  staticDirs: ['../../src']
 };
 
 // eslint-disable-next-line import/no-default-export -- Alow in this file
